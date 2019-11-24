@@ -1,0 +1,62 @@
+[
+  {
+    "name":"Anca Trimbaciu",
+    "role": "Director",
+    "image": "assets/images/team/anca.jpg"
+  },
+  {
+    "name":"Celeste Abayomi",
+    "role": "Director",
+    "image": "assets/images/team/celeste.jpg"
+  },
+  {
+    "name":"Chelsea Bland",
+    "role": "Director",
+    "image": "assets/images/team/Chelsea.jpg"
+  },
+  {
+    "name":"Edward Sykes",
+    "role": "Director",
+    "image": "assets/images/team/Ed.jpg"
+  },
+  {
+    "name":"Laura Gonzalez Vega",
+    "role": "Landscape architect",
+    "image": "assets/images/team/laura.jpg"
+  },
+  {
+    "name":"Jim Rapanut",
+    "role": "Master planner",
+    "image": "assets/images/team/Jim.jpg"
+  },
+  {
+    "name":"Shadath Chowdhury",
+    "role": "Sports and leisure",
+    "image": "assets/images/team/mhadath.jpg"
+  },
+  {
+    "name":"Katie van Dorssen",
+    "role": "Heritage assistant",
+    "image": "assets/images/team/Katie.jpg"
+  },
+  {
+    "name":"Ethan Schofield",
+    "role": "Social housing",
+    "image": "assets/images/team/ethan.jpg"
+  },
+  {
+    "name":"Mark Pearce",
+    "role": "Administrator",
+    "image": "assets/images/team/mark.jpg"
+  },
+  {
+    "name":"Oliver Thomas",
+    "role": "Media and market consultant",
+    "image": "assets/images/team/Oli.jpg"
+  },
+  {
+    "name":"Verity Roweth",
+    "role": "Landlaw architect",
+    "image": "assets/images/team/Verity1.jpg"
+  }
+]

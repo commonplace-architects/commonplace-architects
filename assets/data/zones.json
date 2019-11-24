@@ -1,0 +1,205 @@
+[
+  {
+    "name": "Hulme",
+    "image": "assets/images/zones/Manchester-Hulme-Bridge.png",
+    "location": [53.4673, -2.2472],
+    "sites": [
+      {
+        "name": "Gamecock, Boundary Lane",
+        "hectares": 0.08,
+        "num_investors": 4,
+        "interested": 10,
+        "ownership": "Unknown",
+        "ways_of_owning": [
+          "Form a group within your community",
+          "Select and asset",
+          "Evaluate tactics of appropriation",
+          "Create a business plan",
+          "Secure funding",
+          "Take ownership",
+          "Fulfil business plan"
+        ],
+        "suggestion": "Student accommodation",
+        "grant": "https://www.grantsonline.org.uk/",
+        "description": "The site is currently occupied by the now vacant former Gamecock public house, a part single part two storey 1970’s style detached public house. The footprint of the building covers excess of 75% of the site. There is a car park fronting Boundary lane with access from Camelford Close and a deep grass verge to Booth Street West. At the junction of Camelford Close are four trees within the curtilage of the site along the Boundary Lane frontage, two of which are subject to a tree preservation order. Overall, the area is predominantly residential in nature.",
+        "location": [53.466751, -2.240326],
+        "images": [
+          "assets/images/Gamecock_boundarylane.png",
+          "assets/images/gamecock/Gamecock_boundarylane1.jpg",
+          "assets/images/gamecock/Gamecock_boundarylane2.jpg",
+          "assets/images/gamecock/Gamecock_boundarylane3.jpg",
+          "assets/images/gamecock/Gamecock_boundarylane4.jpg",
+          "assets/images/gamecock/Gamecock_boundarylane5.jpg"
+        ],
+        "state": "available"
+      },
+      {
+        "name": "Birley Fields Site M, Bonsall Street",
+        "hectares": 0.68,
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        "location": [53.467004, -2.244093],
+        "images": [ "assets/images/Birley-Fields-Site.png"],
+        "state": "available"
+      },
+      {
+        "name": "Arundel Street",
+        "hectares": 0.35,
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        "location": [53.472723, -2.260186],
+        "images": [ "assets/images/Arundel_St.png"],
+        "state": "available"
+      },
+      {
+        "name": "Former Bulls Head Pub, Chester Road/Cleworth Street",
+        "hectares": 0.06,
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        "location": [53.469938, -2.263754],
+        "images": [ "assets/images/Former-Bulls-Head-Pub.png"],
+        "state": "available"
+      },
+      {
+        "name": "Cornbrook Road/Chester Road",
+        "hectares": 0.31,
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        "location": [53.470059, -2.26597],
+        "images": [ "assets/images/Cornbrook-road.png"],
+        "state": "available"
+      },
+      {
+        "name": "Claremont Resource Centre",
+        "hectares": 0.37,
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        "location": [53.465222, -2.249897],
+        "images": [ "assets/images/claremont-resource-centre.png"],
+        "state": "available"
+      },
+      {
+        "name": "Britannia Basin, Trentham Street",
+        "hectares": 0.71,
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        "location": [53.470653, -2.265416],
+        "images": [ "assets/images/Trentham-st.png"],
+        "state": "available"
+      },
+      {
+        "name": "Burlington Square, Coupland Street",
+        "hectares": 0.72,
+        "planning_permission_approved": "10/01/2018",
+        "description": "Erection of part six, seven, eight and ten storey building with partial basement and plant, to provide 273 apartments (use class C3)",
+        "location": [53.464228, -2.238956],
+        "images": [ "assets/images/Coupland-street.png"],
+        "state": "active"
+      },
+      {
+        "name": "Unit 6, Bentinck Street Industrial Estate, Bentinck Street",
+        "hectares": 0.08,
+        "planning_permission_approved": "02/05/2017",
+        "description": "Redevelopment of the site with a mixed use development comprising 59 residential apartments (Use Class C3). Ground floor commercial unit (to include Use Classes A1, A2, A3, A4, B1)",
+        "location": [53.471681, -2.260014],
+        "images": [ "assets/images/Unit-6-bentinck-st.png"],
+        "state": "active"
+      },
+      {
+        "name": "Former Manchester Regiment PH, 6 Hulme Hall Road",
+        "hectares": 0.05,
+        "planning_permission_approved": "23/09/2016",
+        "description": "Redevelopment of the site to provide a total of 42no. residential units comprising 1 and 2 bedroom apartments and associated parking.",
+        "location": [53.471099, -2.263099],
+        "images": [ "assets/images/6hulme-hall-rd.png"],
+        "state": "active"
+      },
+      {
+        "name": "The Old Abbey Taphouse",
+        "description": "The old Abbey Taphouse re-opened in October 2016 as a STEAM (that's Science Technology Engineering Arts and Maths) focused hub in a pub connecting communities through events and creating networks between academics, residents and local businesses",
+        "location": [53.462132, -2.237418],
+        "images": [ "assets/images/old_abbey.png"],
+        "state": "community asset transfer"
+      },
+      {
+        "name": "Three Legs of Man",
+        "description": "Traditional corner pub on the once busy Stretford road now somewhat by-passed though still at the heart of a vibrant and varied community. The present landlord installed a real ale when he took over after a long period without any. The unremarkable exterior conceals a cosy two roomed pub, a large screen adorns the facing wall, the bar itself is in the centre between the bar and lounge, a pool table sits squarely in the middle of the smaller of the two rooms. The bar is on one of the quieter routes to Old Trafford and gets quite busy on match days when the promising looking pie oven which sits atop the bar comes into its own.",
+        "location": [53.465494, -2.259364],
+        "images": [ "assets/images/three-legs.png"],
+        "suggestion": "Community library",
+        "state": "community asset transfer"
+      },
+      {
+        "name": "Excelsior Mill Site, Hulme Hall Road",
+        "hectares": 0.18,
+        "design_stage": "4",
+        "share_holder_info": ["summary.pdf"],
+        "involved": [
+          "Developer: Mulbury City",
+          "Architect: Tim Groom",
+          "Planning consultant: Deloitte",
+          "Structural Engineer: Ramboll",
+          "M&E consultant: Futureserv",
+          "Quantity Surveyor: RLB",
+          "Main contractor: GMI Construction"
+        ],
+        "planning_permission_approved": "13/10/2017",
+        "description": "Construction of new 8 storey, plus basement, residential building (Use Class C3) to incorporate 108 luxury apartments, servicing arrangements, car and cycle parking, and associated works. The scheme will include apartments of one, two and three-bedrooms, marketed for private sale. Some of them will come with balconies and access to a communal roof garden. A basement car park will provide onsite parking. This will bring back an active frontage to the canal towpath with its double-height entrance. The development provides a solution for the brownfield site which has been vacant since the building partially collapsed in July 2015 and had to be demolished.",
+        "location": [53.471474, -2.264186],
+        "images": [
+          "assets/images/excelsior-mill-site.png",
+          "assets/images/excelsior/excelsio1.jpg",
+          "assets/images/excelsior/excelsio2.jpg",
+          "assets/images/excelsior/excelsio3.jpg",
+          "assets/images/excelsior/excelsio4.jpg",
+          "assets/images/excelsior/excelsio5.jpg"
+        ],
+        "state": "active"
+      }
+    ]
+  },
+  {
+    "name": "Ancoats",
+    "sites": [
+      {
+        "name": "site0",
+        "location": [0,0]
+      }
+    ],
+    "image": "assets/images/zones/Ancoats.png"
+  },
+  {
+    "name": "Levenshulme",
+    "sites": [
+      {
+        "name": "site0",
+        "location": [0,0]
+      }
+    ],
+    "image": "assets/images/zones/Levenshulme.png"
+  },
+  {
+    "name": "Rochdale",
+    "sites": [
+      {
+        "name": "site0",
+        "location": [0,0]
+      }
+    ],
+    "image": "assets/images/zones/Rochdale.png"
+  },
+  {
+    "name": "Salford",
+    "sites": [
+      {
+        "name": "site0",
+        "location": [0,0]
+      }
+    ],
+    "image": "assets/images/zones/Salford.png"
+  },
+  {
+    "name": "Wythenshawe",
+    "sites": [
+      {
+        "name": "site0",
+        "location": [0,0]
+      }
+    ],
+    "image": "assets/images/zones/Wythenshawe.png"
+  }
+]

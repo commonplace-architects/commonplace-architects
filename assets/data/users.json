@@ -1,0 +1,26 @@
+{
+  "laura@commonplace.com": {
+    "name": "Laura",
+    "password": "password",
+    "email": "laura@commonplace.com",
+    "staff": true
+  },
+  "john@gmail.com": {
+    "name": "John",
+    "password": "password",
+    "email": "john@gmail.com",
+    "staff": false,
+    "data": {
+      "investments": [
+        {
+          "site": "Gamecock, Boundary Lane",
+          "invested": 64000,
+          "shares": 5,
+          "investors": ["Max Smith", "Will Davies", "Rachel Wilson", "Anna Taylor"],
+          "documents": [ "Receipt", "Plans"]
+        }
+      ],
+      "liked": ["Arundel Street", "Claremont Resource Center", "Street Hulme"]
+    }
+  }
+}

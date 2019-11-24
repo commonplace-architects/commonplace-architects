@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en" ng-app="app">
+
+<head>
+    <meta charset="utf-8" http-equiv="Content-Type" content="txt/html">
+    <title>Common Place</title>
+    <script src="https://kit.fontawesome.com/48ab82b24f.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <!-- bootstrap css -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          crossorigin="anonymous">
+    <!-- bootstrap js  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+            crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            crossorigin="anonymous"></script>
+
+    <!-- map sutff -->
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.1.1/css/ol.css"
+          type="text/css">
+    <script src="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.1.1/build/ol.js"></script>
+
+    <!-- angular js -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular.min.js" crossorigin="anonymous"></script>
+    <script src="assets/js/angular-animate.min.js" crossorigin="anonymous"></script>
+    <script src="assets/js/angular-touch.min.js" crossorigin="anonymous"></script>
+
+    <script src="//unpkg.com/@uirouter/angularjs/release/angular-ui-router.min.js"></script>
+
+    <!-- self scripts -->
+    <link rel="stylesheet" href="app.css">
+    <script src="app.js"></script>
+    <script src="app/data.service.js"></script>
+    <script src="app/auth.service.js"></script>
+    <script src="app/top_level.controller.js"></script>
+    <script src="app/account.controller.js"></script>
+    <script src="app/home.controller.js"></script>
+    <script src="app/community.controller.js"></script>
+</head>
+
+<body ng-controller="TopLevelController">
+<header>
+    <nav class="flex-row flex-space-between fixed-top width-100 primary-blue-bg-80-opacity white-0 padding-top-1 padding-bottom-1">
+        <div class="margin-left-1">
+            <a ui-sref="home({scrollTo:'top'})">Common Place</a>
+        </div>
+        <div class="flex-row flex-right margin-right-1" id="inline-nav-buttons">
+            <div class="margin-right-1"><a ui-sref="home({scrollTo: 'mission'})">Our Mission</a></div>
+            <div class="margin-right-1"><a ui-sref="home({scrollTo: 'community'})">Communities</a></div>
+            <div class="margin-right-1"><a ui-sref="home({scrollTo: 'team'})">Team</a></div>
+            <div class="margin-right-1"><a ui-sref="home({scrollTo: 'contact'})">Contact Us</a></div>
+            <div class="margin-right-1">
+                <button ng-if="!loggedIn" data-toggle="modal" data-target="#loginModal">Login</button>
+                <a ng-if="loggedIn" ui-sref="account">Account</a>
+            </div>
+            <div class="margin-right-1" ng-if="loggedIn">
+                <svg class="has-hover" ng-click="logOut()" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="white"><path d="M10 9.408l2.963 2.592-2.963 2.592v-1.592h-8v-2h8v-1.592zm-2-4.408v4h-8v6h8v4l8-7-8-7zm6-3c-1.787 0-3.46.474-4.911 1.295l.228.2 1.396 1.221c1.004-.456 2.114-.716 3.287-.716 4.411 0 8 3.589 8 8s-3.589 8-8 8c-1.173 0-2.283-.26-3.288-.715l-1.396 1.221-.228.2c1.452.82 3.125 1.294 4.912 1.294 5.522 0 10-4.477 10-10s-4.478-10-10-10z"/></svg>
+            </div>
+        </div>
+        <div id="collapsed-menu-button" ng-click="openNav()">
+            <svg height="24" class="octicon octicon-grabber has-hover" fill="white" viewBox="0 0 8 16" version="1.1" width="24" aria-hidden="true" >
+                <path fill-rule="evenodd" d="M8 4v1H0V4h8zM0 8h8V7H0v1zm0 3h8v-1H0v1z"></path></svg>
+        </div>
+        <div id="small-screen-nav" class="overlay">
+            <a href="javascript:void(0)" class="closebtn" ng-click="closeNav()">&times;</a>
+            <div class="overlay-content">
+                <div class="margin-right-1"><a ui-sref="home({scrollTo: 'mission'})" ng-click="closeNav()">Our Mission</a></div>
+                <div class="margin-right-1"><a ui-sref="home({scrollTo: 'community'})" ng-click="closeNav()">Communities</a></div>
+                <div class="margin-right-1"><a ui-sref="home({scrollTo: 'team'})" ng-click="closeNav()">Team</a></div>
+                <div class="margin-right-1"><a ui-sref="home({scrollTo: 'contact'})" ng-click="closeNav()">Contact Us</a></div>
+                <div class="margin-right-1">
+                    <a class="has-hover" ng-if="!loggedIn" data-toggle="modal" data-target="#loginModal" ng-click="closeNav()">Login</a>
+                    <a ng-if="loggedIn" ui-sref="account" ng-click="closeNAv()">Account</a>
+                </div>
+                <div class="margin-right-1" ng-if="loggedIn">
+                    <svg class="has-hover" ng-click="logOut();closeNav()" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="white"><path d="M10 9.408l2.963 2.592-2.963 2.592v-1.592h-8v-2h8v-1.592zm-2-4.408v4h-8v6h8v4l8-7-8-7zm6-3c-1.787 0-3.46.474-4.911 1.295l.228.2 1.396 1.221c1.004-.456 2.114-.716 3.287-.716 4.411 0 8 3.589 8 8s-3.589 8-8 8c-1.173 0-2.283-.26-3.288-.715l-1.396 1.221-.228.2c1.452.82 3.125 1.294 4.912 1.294 5.522 0 10-4.477 10-10s-4.478-10-10-10z"/></svg>
+                </div>
+            </div>
+        </div>
+    </nav>
+</header>
+<main class="width-100 margin-top-58px">
+    <div ui-view></div>
+    <!-- Modal -->
+    <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModal" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header primary-blue-bg white-0">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Login</h5>
+                    <button type="button" class="close white-0" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true" class="white-0">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="errors" ng-if="modal_errors"><p>{{modal_errors}}</p></div>
+                    <form name="loginForm" ng-pristine>
+                        <div class="flex-row width-100 margin-bottom-1 margin-top-1">
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text" id="">Username</span>
+                                </div>
+                                <input type="text" class="form-control" placeholder="Your username..."
+                                       ng-model="form.user">
+                            </div>
+                        </div>
+                        <div class="flex-row width-100 margin-bottom-1">
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text" id="">Password</span>
+                                </div>
+                                <input type="password" class="form-control" placeholder="Your password..."
+                                       ng-model="form.password">
+                            </div>
+                        </div>
+                    </form>
+                    <div class="flex-row flex-right margin-bottom-1">
+                        <div class='toggle' id='switch' ng-click="switch_clicked($event)">
+                            <div class='toggle-text-off'>Community</div>
+                            <div class='toggle-button'></div>
+                            <div class='toggle-text-on'>Staff</div>
+                        </div>
+                    </div>
+                    <div class="flex-row width-100 width-100">
+                        <button type="button" class="btn btn-primary btn-lg btn-block primary-blue-bg no-border"
+                                ng-click="tryLogin($event)">Login
+                        </button>
+                    </div>
+                </div>
+                <div class="modal-footer d-flex justify-content-center">
+                    <div class="flex-row flex-centered white-space-pre">Not a member yet? <a href="#">Sign up</a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+<footer class="grey-bg-0 white-0 flex-column">
+    <div>Common Place; a new age architectural practice</div>
+    <div class="font-size-1-2 margin-top-0-5">
+        <a href="https://www.facebook.com" class="margin-right-0-5"><i class="fab fa-facebook"></i></a>
+        <a href="https://www.twitter.com" class="margin-right-0-5"><i class="fab fa-twitter"></i></a>
+        <a href="https://www.instagram.com/commonplace.architects" class="margin-right-0-5"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.linkedin.com"><i class="fab fa-linkedin"></i></a>
+    </div>
+</footer>
+</body>
+
+</html>

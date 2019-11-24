@@ -1,0 +1,85 @@
+<div class="flex-row width-100">
+    <nav class="side-nav" hidden>
+
+    </nav>
+    <div class="flex-column flex-grow-1">
+        <section
+                class="width-100 first-section primary-blue-bg white-0 d-flex justify-content-center align-items-center"
+                id="top">
+            <div class="padding-top-1 padding-bottom-1 width-75">
+                <div class="display-4">Welcome {{user.name}}</div>
+                <div class="lead">Check your recent activity</div>
+            </div>
+        </section>
+        <section class="padding-top-4 padding-bottom-4">
+            <div class="container-fluid section-container">
+                <h4 class="primary-blue"><strong>Investments</strong></h4>
+                <div ng-repeat="invest in user.data.investments">
+                    <div class="has-hover flex-row" ng-click="invest.hide = !invest.hide">
+                        <div ng-class="{'chevron-arrow-down': !invest.hide, 'chevron-arrow-left':invest.hide}"></div>
+                        <div class="flex-align-self-center"><strong>{{invest.site}}</strong></div>
+                    </div>
+                    <div class="flex-column padding-left-1 margin-top-1" ng-if="!invest.hide">
+                        <span><span class="account-header">Investment quantity:</span> £{{invest.invested}}</span>
+                        <span><span class="account-header">Shares:</span> {{invest.shares}}</span>
+                        <div>
+                            <span class="account-header">Other investors:</span>
+                            <ul class="investor-list">
+                                <li ng-repeat="investor in invest.investors" class="has-hover primary-blue">
+                                    <svg class="octicon octicon-comment margin-right-0-5" viewBox="0 0 16 16"
+                                         version="1.1" width="16" height="16" aria-hidden="true">
+                                        <path fill-rule="evenodd"
+                                              d="M14 1H2c-.55 0-1 .45-1 1v8c0 .55.45 1 1 1h2v3.5L7.5 11H14c.55 0 1-.45 1-1V2c0-.55-.45-1-1-1zm0 9H7l-2 2v-2H2V2h12v8z"></path>
+                                    </svg>
+                                    {{investor}}
+                                </li>
+                            </ul>
+                        </div>
+                        <div>
+                            <span class="account-header">Documents:</span>
+                            <ul class="doc-list primary-blue">
+                                <li ng-repeat="docs in invest.documents" class="has-hover">
+                                    <svg class="octicon octicon-file-pdf margin-right-0-5" viewBox="0 0 12 16"
+                                         version="1.1" width="12" height="16" aria-hidden="true">
+                                        <path fill-rule="evenodd"
+                                              d="M8.5 1H1a1 1 0 00-1 1v12a1 1 0 001 1h10a1 1 0 001-1V4.5L8.5 1zM1 2h4a.68.68 0 00-.31.2 1.08 1.08 0 00-.23.47 4.22 4.22 0 00-.09 1.47c.06.609.173 1.211.34 1.8A21.78 21.78 0 013.6 8.6c-.5 1-.8 1.66-.91 1.84a7.156 7.156 0 00-.69.3c-.362.165-.699.38-1 .64V2zm4.42 4.8a5.65 5.65 0 001.17 2.09c.275.237.595.417.94.53-.64.09-1.23.2-1.81.33-.618.15-1.223.347-1.81.59s.22-.44.61-1.25c.365-.74.67-1.51.91-2.3l-.01.01zM11 14H1.5a.743.743 0 01-.17 0 2.12 2.12 0 00.73-.44 10.14 10.14 0 001.78-2.38c.31-.13.58-.23.81-.31l.42-.14c.45-.13.94-.23 1.44-.33s1-.16 1.48-.2c.447.216.912.394 1.39.53.403.11.814.188 1.23.23h.38V14H11zm0-4.86a3.743 3.743 0 00-.64-.28 4.221 4.221 0 00-.75-.11c-.411.003-.822.03-1.23.08a3 3 0 01-1-.64 6.07 6.07 0 01-1.29-2.33c.111-.661.178-1.33.2-2 .02-.25.02-.5 0-.75a1.05 1.05 0 00-.2-.88.82.82 0 00-.61-.23H8l3 3v4.14z"></path>
+                                    </svg>
+                                    {{docs}}
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="primary-orange-bg primary-blue padding-bottom-4 padding-top-4">
+            <div class="container-fluid section-container">
+                <h4 class="black-0">Liked</h4>
+                <div class="flex-column">
+                    <div ng-repeat="liked in user.data.liked" class="has-hover flex-row">
+                        <div class="chevron-arrow-left-sm primary-blue-border"></div>
+                        <span>{{liked}}</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="padding-bottom-4 padding-top-4 primary-blue-bg width-100 white-0">
+            <div class="container-fluid section-container">
+                <h4>Message</h4>
+                <div class="flex-column margin-top-1">
+                    <form>
+                        <div class="flex-row margin-bottom-1">
+                            <label for="message-to" class="min-width-100-px">To:</label>
+                            <input id="message-to" type="text" class="form-control">
+                        </div>
+                        <div class="flex-row">
+                            <label for="message-body" class="min-width-100-px">Message:</label>
+                            <textarea id="message-body" rows="10" class="form-control"></textarea>
+                        </div>
+                    </form>
+                    <button class="btn btn-primary float-right fit-content flex-align-self-end margin-top-1">Send</button>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>

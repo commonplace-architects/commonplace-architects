@@ -1,0 +1,113 @@
+<div class="flex-column margin-top-5 margin-bottom-2 width-100">
+    <div class="text-center"><h4 class="display-4">{{community.name}}</h4></div>
+    <div class="flex-column" id="map-wrapper">
+        <div id="map" class="map">
+            <div id="info" data-toggle="tooltip" title="{{tooltip_text}}"></div>
+        </div>
+        <div class="flex-column padding-top-1 padding-bottom-2 primary-orange-bg"
+             ng-if="extra_info_section.show" id="extra-info-section">
+            <div class="float-right margin-right-1">
+                <button type="button" class="close" aria-label="Close"
+                        ng-click="extra_info_section.show = false; mapResize()">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="row">
+                <div class="col-lg-3 col-md-4 col-sm-5 col-xs-12 margin-right-1 margin-left-1"
+                     ng-if="!extra_info_section.site.images">
+                    <svg class="bd-placeholder-img rounded img-fluid" width="100%" height="300"
+                         xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false"
+                         role="img" aria-label="Placeholder: 200x200"><title>Placeholder</title>
+                        <rect width="100%" height="100%" fill="#868e96"></rect>
+                        <text x="35%" y="50%" fill="#dee2e6" dy=".3em">Image not available</text>
+                    </svg>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-5 col-xs-12 margin-right-1 margin-left-1"
+                     ng-if="extra_info_section.site.images">
+                    <div class="slideshow-container">
+                        <div class="mySlides" ng-repeat="image in extra_info_section.site.images">
+                            <img class="img-fluid" src="{{image}}" alt="site image">
+                        </div>
+                    </div>
+                    <a class="prev white-0" ng-click="plusSlides(-1)">&#10094;</a>
+                    <a class="next white-0" ng-click="plusSlides(1)">&#10095;</a>
+                </div>
+                <div class="flex-column col-lg-8 col-md-7 col-sm-6 col-xs-12 margin-side-on-sm">
+                    <h5 class="primary-blue">{{extra_info_section.site.name}}</h5>
+                    <div>
+                        <strong>Site status:</strong> {{extra_info_section.site.state}}
+                    </div>
+                    <div class="has-hover margin-top-1 margin-bottom-1">
+                        <svg height="32" class="octicon octicon-thumbsup" viewBox="0 0 16 16" version="1.1" width="32"
+                             aria-hidden="true">
+                            <path fill-rule="evenodd"
+                                  d="M15.98 8.17l-.97 5.95C14.84 15.5 13.13 16 12 16H5.69c-.2 0-.38-.05-.53-.14L3.72 15H2c-1.06 0-2-.94-2-2V9c0-1.06.94-2.02 2-2h2c.91 0 1.39-.45 2.39-1.55.91-1 .88-1.8.63-3.27-.08-.5.06-1 .42-1.42C7.83.29 8.42 0 9 0c1.83 0 3 3.71 3 5.01l-.02.98h2.04c1.16 0 1.95.8 1.98 1.97 0 .11-.02.21-.02.21zm-1.97-1.19h-1.99c-.7 0-1.03-.28-1.03-.97l.03-1.03c0-1.27-1.17-4-2-4-.5 0-1.08.5-1 1 .25 1.58.34 2.78-.89 4.14C6.11 7.25 5.36 8 4 8v6l1.67 1H12c.73 0 1.95-.31 2-1l.02-.02 1-6c-.03-.64-.38-1-1-1h-.01z"></path>
+                        </svg>
+                    </div>
+                    <div class="progress margin-top-1" ng-if="extra_info_section.site.state === 'available'">
+                        <div class="progress-bar primary-blue-bg" role="progressbar" style="width: 25%"
+                             aria-valuenow="25"
+                             aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                    <div class="width-100 text-right primary-blue light-text" ng-if="extra_info_section.site.state === 'available'">
+                        20 out of £640,000
+                    </div>
+                    <div ng-if="extra_info_section.site.hectares">
+                        <strong>Hectares: </strong>{{extra_info_section.site.hectares}}
+                    </div>
+                    <div ng-if="extra_info_section.site.num_investors">
+                        <strong>Number of investors: </strong>{{extra_info_section.site.num_investors}}
+                    </div>
+                    <div ng-if="extra_info_section.site.interested">
+                        <strong>People interested: </strong>{{extra_info_section.site.interested}}
+                    </div>
+                    <div ng-if="extra_info_section.site.ownership">
+                        <strong>Ownership: </strong>{{extra_info_section.site.ownership}}
+                    </div>
+                    <div ng-if="extra_info_section.site.suggestion">
+                        <strong>Site suggestion: </strong>{{extra_info_section.site.suggestion}}
+                    </div>
+                    <div ng-if="extra_info_section.site.planning_permission_approved">
+                        <strong>Planning permission
+                            approved: </strong>{{extra_info_section.site.planning_permission_approved}}
+                    </div>
+                    <div ng-if="extra_info_section.site.design_stage">
+                        <strong>Design stage: </strong>{{extra_info_section.site.design_stage}}
+                    </div>
+                    <div class="margin-top-1">
+                        <strong>Description:</strong>
+                        <p class="white-space-pre-line">{{extra_info_section.site.description}}</p>
+                    </div>
+                    <div ng-if="extra_info_section.site.ways_of_owning">
+                        <strong>Ways of owning the site: </strong>
+                        <ol>
+                            <li ng-repeat="step in extra_info_section.site.ways_of_owning">{{step}}</li>
+                        </ol>
+                    </div>
+                    <div ng-if="extra_info_section.site.grant">
+                        <strong>Link to grant: </strong><a href="{{extra_info_section.site.grant}}">{{extra_info_section.site.grant}}</a>
+                    </div>
+                    <div ng-if="extra_info_section.site.involved" class="margin-top-1">
+                        <strong>Who is involved:</strong>
+                        <ul class="no-style-list">
+                            <li ng-repeat="involved in extra_info_section.site.involved">{{involved}}</li>
+                        </ul>
+                    </div>
+                    <div ng-if="extra_info_section.site.share_holder_info">
+                        <strong>Share holder information:</strong>
+                        <ul class="no-style-list">
+                            <li ng-repeat="doc in extra_info_section.site.share_holder_info" class="has-hover primary-blue">
+                                <svg class="octicon octicon-file-pdf margin-right-0-5" viewBox="0 0 12 16"
+                                     version="1.1" width="12" height="16" aria-hidden="true">
+                                    <path fill-rule="evenodd"
+                                          d="M8.5 1H1a1 1 0 00-1 1v12a1 1 0 001 1h10a1 1 0 001-1V4.5L8.5 1zM1 2h4a.68.68 0 00-.31.2 1.08 1.08 0 00-.23.47 4.22 4.22 0 00-.09 1.47c.06.609.173 1.211.34 1.8A21.78 21.78 0 013.6 8.6c-.5 1-.8 1.66-.91 1.84a7.156 7.156 0 00-.69.3c-.362.165-.699.38-1 .64V2zm4.42 4.8a5.65 5.65 0 001.17 2.09c.275.237.595.417.94.53-.64.09-1.23.2-1.81.33-.618.15-1.223.347-1.81.59s.22-.44.61-1.25c.365-.74.67-1.51.91-2.3l-.01.01zM11 14H1.5a.743.743 0 01-.17 0 2.12 2.12 0 00.73-.44 10.14 10.14 0 001.78-2.38c.31-.13.58-.23.81-.31l.42-.14c.45-.13.94-.23 1.44-.33s1-.16 1.48-.2c.447.216.912.394 1.39.53.403.11.814.188 1.23.23h.38V14H11zm0-4.86a3.743 3.743 0 00-.64-.28 4.221 4.221 0 00-.75-.11c-.411.003-.822.03-1.23.08a3 3 0 01-1-.64 6.07 6.07 0 01-1.29-2.33c.111-.661.178-1.33.2-2 .02-.25.02-.5 0-.75a1.05 1.05 0 00-.2-.88.82.82 0 00-.61-.23H8l3 3v4.14z"></path>
+                                </svg>
+                                {{doc}}
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

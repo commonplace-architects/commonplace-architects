@@ -1,0 +1,106 @@
+<div class="flex-column">
+    <section
+            class="container-fluid margin-sides-0 padding-right-0 padding-left-0 primary-blue-bg white-0 justify-content-center align-items-center"
+            id="top">
+        <div class="position-relative">
+            <img src="assets/images/home/front_page.jpg" aria-label="main image" alt="front page cover"
+                 class="img-fluid keep-height-ratio cover-image">
+            <div class="padding-top-1 padding-bottom-1 home-title section-container">
+                <div class="flex-column">
+                    <span class="display-4 animated-fade-in" id="main-title">Common Places</span>
+                    <span class="lead animated-fade-in" id="lead">A new age architectural practice</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="padding-top-4 padding-bottom-4" id="mission">
+        <div class="container-fluid section-container">
+            <h4>Our Mission</h4>
+            <div>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit Lorem ipsum dolor sit amet, consectetur
+                adipiscing elit Lorem ipsum dolor sit amet, consectetur adipiscing elit Lorem ipsum dolor sit amet,
+                consectetur adipiscing elit Lorem ipsum dolor sit amet,
+                consectetur adipiscing elit Lorem ipsum dolor sit amet, consectetur adipiscing elit Lorem ipsum dolor
+                sit amet, consectetur adipiscing elit Lorem ipsum dolor sit amet, consectetur adipiscing elit Lorem
+                ipsum dolor sit amet, consectetur
+                adipiscing elit Lorem ipsum dolor sit amet, consectetur adipiscing elit Lorem ipsum dolor sit amet,
+                consectetur adipiscing elit Lorem ipsum dolor sit amet, consectetur adipiscing elit
+            </div>
+            <h4 class="margin-top-1">Why</h4>
+            <div>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit Lorem ipsum dolor sit amet, consectetur
+                adipiscing elit Lorem ipsum dolor sit amet, consectetur adipiscing elit Lorem ipsum dolor sit amet,
+                consectetur adipiscing elit Lorem ipsum dolor sit amet,
+                consectetur adipiscing elit Lorem ipsum dolor sit amet, consectetur adipiscing elit Lorem ipsum dolor
+                sit amet, consectetur adipiscing elit Lorem ipsum dolor sit amet, consectetur adipiscing elit Lorem
+                ipsum dolor sit amet, consectetur
+                adipiscing elit Lorem ipsum dolor sit amet, consectetur adipiscing elit Lorem ipsum dolor sit amet,
+                consectetur adipiscing elit Lorem ipsum dolor sit amet, consectetur adipiscing elit
+            </div>
+            <h4 class="margin-top-1">How</h4>
+            <div>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit Lorem ipsum dolor sit amet, consectetur
+                adipiscing elit Lorem ipsum dolor sit amet, consectetur adipiscing elit Lorem ipsum dolor sit amet,
+                consectetur adipiscing elit Lorem ipsum dolor sit amet,
+                consectetur adipiscing elit Lorem ipsum dolor sit amet, consectetur adipiscing elit Lorem ipsum dolor
+                sit amet, consectetur adipiscing elit Lorem ipsum dolor sit amet, consectetur adipiscing elit Lorem
+                ipsum dolor sit amet, consectetur
+                adipiscing elit Lorem ipsum dolor sit amet, consectetur adipiscing elit Lorem ipsum dolor sit amet,
+                consectetur adipiscing elit Lorem ipsum dolor sit amet, consectetur adipiscing elit
+            </div>
+        </div>
+    </section>
+    <section class="primary-orange-bg primary-blue padding-bottom-4 padding-top-4" id="community">
+        <div class="container-fluid section-container">
+            <h4 class="margin-bottom-1">Find Your Community</h4>
+            <div ng-if="zones" class="row">
+                <div ng-repeat="zone in zones"
+                     class="zone-image-md secondary-orange-light display-4 has-hover col-lg-4 col-md-4 col-sm-6 col-xs-12"
+                     ng-click="zone_clicked(zone.name)">
+                    <img ng-if="zone.image" src="{{zone.image}}" alt="{{zone.name}} image" class="img-fluid">
+                </div>
+            </div>
+            <div ng-if="!zones">
+                Could not load zones :(
+            </div>
+        </div>
+    </section>
+    <section class="padding-bottom-4 padding-top-4" id="team">
+        <div class="container-fluid section-container">
+            <h4 class="margin-bottom-2">Meet The Team</h4>
+            <div ng-if="team" class="row flex-space-between margin-right-minus-5 width-100">
+                <div ng-repeat="member in team" class="member-section col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                    <img ng-if="member.image" src="{{member.image}}" class="rounded-circle"
+                         alt="image for team member">
+
+                    <svg ng-if="!member.image" class="bd-placeholder-img rounded-circle" width="200" height="200"
+                         xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false"
+                         role="img" aria-label="Placeholder: 200x200"><title>Placeholder</title>
+                        <rect width="100%" height="100%" fill="#868e96"></rect>
+                        <text x="35%" y="50%" fill="#dee2e6" dy=".3em">200x200</text>
+                    </svg>
+
+                    <h6 class="margin-top-1-force">{{member.name}}</h6>
+                    <div class="text-wrap">{{member.role}}</div>
+                </div>
+            </div>
+            <div ng-if="!team">
+                Could not load team :(
+            </div>
+        </div>
+    </section>
+    <section class="primary-blue-bg white-0 container-fluid margin-sides-0 padding-left-0 padding-right-0" id="contact">
+        <div class="row width-100 padding-right-0 padding-left-0 margin-sides-0 padding-left-0 padding-right-0">
+            <div class="text-center flex-column flex-align-self-center col-xs-12 col-sm-12 col-md-6" id="contact-info">
+                <h5> Manchester</h5>
+                <div>Number 8 First Street</div>
+                <div>Manchester M15 4FN</div>
+                <div>commonplace.architects@gmail.com</div>
+                <div>+44 6969 420 666</div>
+            </div>
+            <div class="text-center flex-column col-xs-12 col-sm-12 col-md-6 margin-sides-0 padding-left-0 padding-right-0">
+                <img src="assets/images/home/location.png" class="img-fluid">
+            </div>
+        </div>
+    </section>
+</div>
