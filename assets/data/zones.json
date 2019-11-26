@@ -154,6 +154,7 @@
   },
   {
     "name": "Ancoats",
+    "location": [53.485245, -2.227608],
     "sites": [
       {
         "name": "site0",
@@ -164,6 +165,7 @@
   },
   {
     "name": "Levenshulme",
+    "location": [53.448735, -2.193125],
     "sites": [
       {
         "name": "site0",
@@ -174,6 +176,7 @@
   },
   {
     "name": "Rochdale",
+    "location": [53.614363, -2.157104],
     "sites": [
       {
         "name": "site0",
@@ -184,6 +187,7 @@
   },
   {
     "name": "Salford",
+    "location": [53.488162, -2.290517],
     "sites": [
       {
         "name": "site0",
@@ -194,6 +198,7 @@
   },
   {
     "name": "Wythenshawe",
+    "location": [53.401389, -2.271270],
     "sites": [
       {
         "name": "site0",

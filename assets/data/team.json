@@ -16,47 +16,47 @@
   },
   {
     "name":"Edward Sykes",
-    "role": "Director",
+    "role": "Part 1 architectural assistant",
     "image": "assets/images/team/Ed.jpg"
   },
   {
     "name":"Laura Gonzalez Vega",
-    "role": "Landscape architect",
+    "role": "Part 2 architectural assistant",
     "image": "assets/images/team/laura.jpg"
   },
   {
     "name":"Jim Rapanut",
-    "role": "Master planner",
+    "role": "Landlaw/Part 2 architectural assistant",
     "image": "assets/images/team/Jim.jpg"
   },
   {
     "name":"Shadath Chowdhury",
-    "role": "Sports and leisure",
+    "role": "Collaborator",
     "image": "assets/images/team/mhadath.jpg"
   },
   {
     "name":"Katie van Dorssen",
-    "role": "Heritage assistant",
+    "role": "Collaborator",
     "image": "assets/images/team/Katie.jpg"
   },
   {
     "name":"Ethan Schofield",
-    "role": "Social housing",
+    "role": "Collaborator",
     "image": "assets/images/team/ethan.jpg"
   },
   {
     "name":"Mark Pearce",
-    "role": "Administrator",
+    "role": "Collaborator",
     "image": "assets/images/team/mark.jpg"
   },
   {
     "name":"Oliver Thomas",
-    "role": "Media and market consultant",
+    "role": "Collaborator",
     "image": "assets/images/team/Oli.jpg"
   },
   {
     "name":"Verity Roweth",
-    "role": "Landlaw architect",
+    "role": "Collaborator",
     "image": "assets/images/team/Verity1.jpg"
   }
 ]

@@ -2,6 +2,10 @@ body {
     font-family: 'Roboto', sans-serif !important;
 }
 
+html {
+    overflow-x: hidden;
+}
+
 .position-relative {
     position: relative;
 }
@@ -685,6 +689,10 @@ html {
     font-style: italic;
 }
 
+.nav-logo {
+    max-height: 28px;
+}
+
 .side-nav {
     position: absolute;
     top: 0;
@@ -738,18 +746,6 @@ html {
     padding-left: 0;
 }
 
-@media screen and (max-height: 576px) {
-    .overlay a {
-        font-size: 20px
-    }
-
-    .overlay .closebtn {
-        font-size: 40px;
-        top: 15px;
-        right: 35px;
-    }
-}
-
 .light-text {
     font-weight: lighter;
     font-size: 0.9rem;
@@ -760,7 +756,7 @@ html {
 }
 
 /* Responsive tricks */
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 600px) {
     #inline-nav-buttons {
         display: none;
     }
@@ -796,6 +792,16 @@ html {
         width: 100%;
         padding-left: 1rem;
         padding-right: 1rem;
+    }
+
+    .overlay a {
+        font-size: 20px
+    }
+
+    .overlay .closebtn {
+        font-size: 40px;
+        top: 15px;
+        right: 35px;
     }
 }
 
