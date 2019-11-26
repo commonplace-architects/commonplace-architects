@@ -3,7 +3,7 @@ body {
 }
 
 html {
-    overflow-x: hidden;
+    overflow-x: hidden !important;
 }
 
 .position-relative {
@@ -754,6 +754,7 @@ html {
 #collapsed-menu-button {
     display: none;
 }
+
 
 /* Responsive tricks */
 @media screen and (max-width: 600px) {
